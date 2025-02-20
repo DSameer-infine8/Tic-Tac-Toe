@@ -205,7 +205,7 @@
     .boxes{
         height: 150vmin;
         width: 150vmin;
-        gap:1.6vmin;
+        gap:0.6vmin;
     }
 
     .box{
