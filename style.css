@@ -5,7 +5,7 @@
   
   .full{
     color:white;
-    background-color: #343434;
+    background-color: #915E00;
     text-align: center;
   }
 
@@ -69,11 +69,12 @@
   }
   .data{
     position: absolute;
-    background-color: #000000;
+    background-color:#6c6c6c;
     height: 550px;
     width: 600px;
     margin-left: 460px;
     z-index: 3;
+    border: 5px solid rgb(0, 0, 0);
     }
   
   .container {

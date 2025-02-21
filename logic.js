@@ -1,3 +1,4 @@
+let fullBg = document.querySelector(".full");
 let boxes = document.querySelectorAll(".box");
 let resetBtn = document.querySelector(".resetBtn");
 let newgameBtn = document.querySelector(".newgameBtn");
@@ -33,6 +34,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
     //prevent the normal submission of the form
     e.preventDefault();
+    fullBg.style.backgroundColor = "#343434"
 
     data.style.display = 'none' ;
     playerOname.innerHTML = playerO.value;
