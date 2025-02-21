@@ -20,6 +20,50 @@
           </button>
 
     </div>
+
+
+    <div class="scoreBoard">
+        <h1>Score Board</h1>
+        <h2 class="target">Target To Win:</h2>
+        <div class="names">
+            <div class="O"><div ><h3 class="playerOname"></h3></div><h4>Player O</h4></div>
+            <div class="tie"><h3>V/S</h3><h4>Tie</h4></div>
+            <div class="X"><div ><h3 class="playerXname"></h3></div><h4>Player X</h4></div>
+        </div>
+        <div class="scoreCount">
+            <div class="scoreO"><h2>0</h2></div>
+            <div class="scoreTie"><h2>0</h2></div>
+            <div class="scoreX"><h2>0</h2></div>
+            
+        </div>
+
+    </div>
+
+    <div class="data">
+        <form class="form">
+            <label for="playerO">Player O:</label>
+            <input type="text" id="playerO" name="playerO" required><br>
+
+            <label for="playerX">Player X:</label>
+            <input type="text" id="playerX" name="playerX" required><br>
+
+
+        <label for="goal">Target to Win:</label>
+        <select id="goal" name="goal">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="submit">
+        </form>
+    </div>
 <div class="container">
         <div class="boxes">
             <button class="box" id="tl"></button>

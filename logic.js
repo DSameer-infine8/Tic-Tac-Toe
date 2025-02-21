@@ -3,14 +3,49 @@ let resetBtn = document.querySelector(".resetBtn");
 let newgameBtn = document.querySelector(".newgameBtn");
 let showWin = document.querySelector(".showWin");
 let hiddenMsg = document.querySelector(".hidden-msg");
+let reBtn = document.querySelector(".button_top");
 
+let data = document.querySelector(".data")
+let playerO= document.querySelector("#playerO")
+let playerX= document.querySelector("#playerX")
+let goal=document.querySelector("#goal")
+
+
+//scoreBoard
+
+let playerOname = document.querySelector(".playerOname")
+let playerXname = document.querySelector(".playerXname")
+let target = document.querySelector(".target")
+
+
+let scoreO = document.querySelector(".scoreO")
+let scoreX = document.querySelector(".scoreX")
+let scoreTie = document.querySelector(".scoreTie")
+
+
+document.querySelector('form').addEventListener('submit', function (e) {
+
+    //prevent the normal submission of the form
+    e.preventDefault();
+
+    data.style.display = 'none' ;
+    playerOname.innerHTML = playerO.value;
+    playerXname.innerHTML = playerX.value;
+    target.innerHTML = `Target To Win: ${goal.value}`;
+
+});
 let turnO = true;//to start game 
+let gotWinner = false;
+
 
 let resetNewGame= () =>{
     resetColor();
     let turnO = true;
     enableAllBtns();
     hiddenMsg.classList.add("hide");
+    gotWinner = false;
+
+clickedButtons.clear();
 }
 
 //there are total 8 winning conditions
@@ -25,6 +60,7 @@ const winnerPat=[
     [2,4,6]
 ];
 
+const clickedButtons = new Set();
 //this funtion is use change text value X later O repetedly
 boxes.forEach((box) =>{
     box.addEventListener("click",() =>{
@@ -37,6 +73,17 @@ boxes.forEach((box) =>{
         }
         box.disabled =true;
 
+        //check for tie
+        clickedButtons.add(box);
+
+        console.log(clickedButtons.add(box))
+        if (clickedButtons.size === boxes.length && gotWinner == false) {
+
+            scoreTie.textContent = parseInt(scoreTie.textContent) + 1;
+
+            
+            reBtn.innerText= "Next";
+        }
         checkWinner();
     })
 })
@@ -58,6 +105,14 @@ const checkWinner = () =>{
                 let c2=boxes[patter[1]].style.color="white";
                 let c3=boxes[patter[2]].style.color="white";
                 console.log(pos1V +"is Winner");
+                gotWinner = true;
+                if(pos1V === "O"){
+                    scoreO.textContent = parseInt(scoreO.textContent) + 1;
+                }
+                else if(pos1V === "X"){
+                    scoreX.textContent = parseInt(scoreX.textContent) + 1;
+                }
+
                 showWinner(pos1V);
                 disableAllBtns();
             }
@@ -68,8 +123,15 @@ const checkWinner = () =>{
 
 //winner board is hidden , showes up when checkWinner(); calls..
 const showWinner = (winner) =>{
-    showWin.innerText=`🏅 Winner ${winner} 🏆`;
-    hiddenMsg.classList.remove("hide");
+    if(goal.value === scoreX.textContent){
+        showWin.innerText=`🏅 Winner ${playerX.value} 🏆`;
+        hiddenMsg.classList.remove("hide");
+    }else if(goal.value === scoreO.textContent){
+        showWin.innerText=`🏅 Winner ${playerO.value} 🏆`;
+        hiddenMsg.classList.remove("hide");
+
+    }
+
 };
 
 
