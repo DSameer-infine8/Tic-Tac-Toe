@@ -48,6 +48,7 @@ let avt2 = document.querySelector('input[name="user2Avt"]:checked').value;
     user2Img.innerHTML = `<img src= " ${avt2}">`
 
 });
+
 let turnO = true;//to start game 
 let gotWinner = false;
 
