@@ -10,6 +10,12 @@ let playerO= document.querySelector("#playerO")
 let playerX= document.querySelector("#playerX")
 let goal=document.querySelector("#goal")
 
+let radio = document.querySelector(".radio")
+
+
+
+let user1Img = document.querySelector(".user1-avt");
+let user2Img = document.querySelector(".user2-avt");
 
 //scoreBoard
 
@@ -32,6 +38,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
     playerOname.innerHTML = playerO.value;
     playerXname.innerHTML = playerX.value;
     target.innerHTML = `Target To Win: ${goal.value}`;
+
+let avt1 = document.querySelector('input[name="user1Avt"]:checked').value;
+let avt2 = document.querySelector('input[name="user2Avt"]:checked').value;
+
+    user1Img.innerHTML = `<img src= " ${avt1}">`
+    user2Img.innerHTML = `<img src= " ${avt2}">`
 
 });
 let turnO = true;//to start game 
