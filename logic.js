@@ -5,6 +5,7 @@ let newgameBtn = document.querySelector(".newgameBtn");
 let showWin = document.querySelector(".showWin");
 let hiddenMsg = document.querySelector(".hidden-msg");
 let reBtn = document.querySelector(".button_top");
+let playBoard = document.querySelector(".play-board");
 
 let data = document.querySelector(".data")
 let playerO= document.querySelector("#playerO")
@@ -35,7 +36,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
     //prevent the normal submission of the form
     e.preventDefault();
     fullBg.style.backgroundColor = "#343434"
-
+    playBoard.style.display= 'block';
     data.style.display = 'none' ;
     playerOname.innerHTML = playerO.value;
     playerXname.innerHTML = playerX.value;

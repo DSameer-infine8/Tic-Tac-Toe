@@ -13,12 +13,19 @@
     position: absolute;
     background-color: #fff;
     border: 3px solid black;
-    height: auto;
-    width: 400px;
+    height: fit-content;
+    width: 26vw;
     margin-left: 30px;
+    margin-right: 30px;
     color: #000000;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px;
   }
+.yes{
+  display: flex;
+}
+.play-board{
+  display: none;
+}
 .avt{
   height: 80px;
   border-radius: 50%;
@@ -77,15 +84,15 @@
     justify-content: space-between;
   }
   .data{
+    margin: 0 auto;
     padding-top: 15px;
-    position: absolute;
     background-color:#6c6c6c;
-    height: 550px;
-    width: 600px;
-    margin-left: 460px;
-    z-index: 3;
+    height: 85vh;
+    width: 40vw;
     border: 5px solid rgb(0, 0, 0);
     }
+
+  
   
     .target{
       font-weight:bolder;
@@ -116,6 +123,7 @@
   }
   h1{
     font-family: Jazz LET, fantasy;
+    font-size: cal(2rem, 8%);
   }
   .boxes{
     height: 60vmin;
@@ -429,4 +437,156 @@
 		grid-auto-columns: 100%; 
 
 	} 
+}
+
+
+@media (max-width: 1150px) {
+  .yes{
+    flex-wrap: wrap;
+  }
+  .data {
+    width: 70%;
+    margin: 20px auto;
+    position: static;
+
+  }
+
+  .scoreBoard {
+    width: 50%;
+    margin: 20px auto;
+    position: static;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .boxes {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .box {
+    font-size: 8vw;
+  }
+
+  .newgameBtn {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .but {
+    margin: 20px auto;
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .uname {
+    width: 90%;
+  }
+
+  .cssbuttons-io-button {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .carousel {
+    grid-auto-columns: 45% !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .but {
+    margin: 8px auto;
+  }
+  .scoreBoard{
+    padding: 0 10px;
+    width: 70%;
+
+  }
+  .boxes {
+    width: 95vw;
+    height: 95vw;
+    gap: 1vw;
+  }
+
+  .box {
+    font-size: 10vw;
+  }
+
+  .data{
+    width: 95vw;
+  }
+
+  .scoreBoard >h1{
+    font-size: 1.8rem;
+  }
+
+  .names{
+    font-size: 1rem;;
+  }
+  .scoreCountS{
+    gap: 10px;
+    text-align: center;
+  }
+
+  .wrapper {
+    width: 90%;
+  }
+
+  .but {
+    font-size: 5vw;
+    padding: 10px;
+  }
+
+  .target {
+    font-size: 1.2rem;
+  }
+
+  .newgameBtn {
+    width: 70%;
+    font-size: 1rem;
+  }
+
+  .showWin {
+    font-size: 1.2rem;
+  }
+
+  .cssbuttons-io-button {
+    font-size: 1rem;
+    height: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .boxes{
+      width: 100%;
+      gap: 1vw;
+    }
+
+  .scoreBoard{
+    margin: 10px auto;
+    padding: 0 10px;
+    width: 80vw;
+  }
+
+
+  .user1-avt img{
+    height: 85px;
+  }
+  .user2-avt img{
+    height: 85px;
+  }
+  
 }
