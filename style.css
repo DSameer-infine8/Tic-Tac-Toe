@@ -570,6 +570,27 @@
         width: 100%;
     }
 
+    .user1-avt img{
+      height: 70px;
+    }
+
+    .user2-avt img{
+      height: 70px;
+    }
+
+    .scoreBoard >h1 {
+        font-size: 1.5rem;
+    }
+    .names{
+    font-size: 0.8rem;;
+  }
+  .names h3{
+    font-size: 1.2rem;
+  }
+
+  .names h4{
+    font-size: 1rem;
+  }
     .boxes{
       width: 100%;
       gap: 1vw;

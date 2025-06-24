@@ -6,6 +6,7 @@ let showWin = document.querySelector(".showWin");
 let hiddenMsg = document.querySelector(".hidden-msg");
 let reBtn = document.querySelector(".button_top");
 let playBoard = document.querySelector(".play-board");
+let banner = document.querySelector(".banner");
 
 let data = document.querySelector(".data")
 let playerO= document.querySelector("#playerO")
@@ -37,10 +38,12 @@ document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
     fullBg.style.backgroundColor = "#343434"
     playBoard.style.display= 'block';
+    banner.style.display = 'none';
     data.style.display = 'none' ;
     playerOname.innerHTML = playerO.value;
     playerXname.innerHTML = playerX.value;
     target.innerHTML = `Target To Win: ${goal.value}`;
+
 
 let avt1 = document.querySelector('input[name="user1Avt"]:checked').value;
 let avt2 = document.querySelector('input[name="user2Avt"]:checked').value;
